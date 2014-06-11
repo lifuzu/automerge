@@ -1,0 +1,63 @@
+
+#container
+  #header
+    h1= title
+    .left
+      p Server: #{server_left}
+      p Branch: #{branch_left}
+    .right
+      p Server: #{server_right}
+      p Branch: #{branch_right}
+  #repository
+    p Repository: #{repository}
+  #commits
+    - each commit in commits
+      - if (commit.side == '<')
+        - if (commit.company == 'bn')
+          .left.clear.green
+            p Commit: #{commit.commit}
+            p Author: #{commit.author}
+            p Date:   #{commit.date}
+            p     #{commit.comments}
+        - else if (commit.company == 'ti')
+          .left.clear.blue
+            p Commit: #{commit.commit}
+            p Author: #{commit.author}
+            p Date:   #{commit.date}
+            p     #{commit.comments}
+        - else
+          .left.clear.yellow
+            p Commit: #{commit.commit}
+            p Author: #{commit.author}
+            p Date:   #{commit.date}
+            p     #{commit.comments}
+      - else if (commit.side == '>')
+        - if (commit.company == 'bn')
+          .right.clear.green
+            p Commit: #{commit.commit}
+            p Author: #{commit.author}
+            p Date:   #{commit.date}
+            p     #{commit.comments}
+        - else if (commit.company == 'ti')
+          .right.clear.blue
+            p Commit: #{commit.commit}
+            p Author: #{commit.author}
+            p Date:   #{commit.date}
+            p     #{commit.comments}
+        - else
+          .right.clear.yellow
+            p Commit: #{commit.commit}
+            p Author: #{commit.author}
+            p Date:   #{commit.date}
+            p     #{commit.comments}
+  #footer
+    input(type="button", id="push_to_review", value="Push into review server!")
+    input(type="button", id="cancel_the_action", value="Cancel all the actions!")
+    
+  #dialog-confirm(title='Fix the conflict?')
+    p Some conflict have been generated. Please go to http://localhost:3001 to fix. After that, click "Fixed the conflict" button; or click "Cancel" button to reset the action!
+  #dialog-message(title='Detail Information')
+    p This is a placeholder
+  #dialog-revert(title='Revert the commit?')
+    p Do you confirm to revert the commit?
+  

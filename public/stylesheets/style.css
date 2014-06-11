@@ -1,0 +1,64 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  line-height: 1;}
+body #container {
+  width: margin 0 auto, background #99c;}
+body #container #header {
+  border: 2px solid;}
+body #container #header .right {
+  float: right;
+  width: 50%;}
+body #container #header .left {
+  float: left;
+  width: 50%;}
+body #container #repository {
+  float: left;
+  border: 1.5px solid;
+  width: 100%;}
+body #container #commits {
+  float: left;
+  width: 100%;
+  border: 2px solid;}
+body #container #commits .right {
+  float: right;
+  width: 47%;
+  display: block;
+  border: 1px solid;
+  margin: 5px 5px;
+  padding: 10px;}
+body #container #commits .clear {
+  clear: both;}
+body #container #commits .left {
+  float: left;
+  width: 47%;
+  display: block;
+  border: 1px solid;
+  margin: 5px 5px;
+  padding: 10px;}
+body #container #commits .blue {
+  color: blue;}
+body #container #commits .yellow {
+  color: yellow;}
+body #container #commits .green {
+  color: green;}
+body #container #commits .red-background {
+  background: red;}
+body #container #footer {
+  clear: both;
+  border: 2px solid;}
+
+p .left {
+  float: left;
+  width: 30%;}
+p .right {
+  float: right;
+  width: 70%;}
+
+a {
+  color: #00B7FF;}
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;}

@@ -1,0 +1,60 @@
+
+form(method='post', action='/difference')
+  fieldset
+    legend Information
+    p
+      .left
+        label(for='server_from') From Server:
+      .right
+        select(name="server_from")
+          option(value="") -- Select Gerrit Server --
+          option(value="dhadevgit01") dhadevgit01.barnesandnoble.com
+          option(value="dhadevgit02") dhadevgit02.barnesandnoble.com
+          option(value="pa-git01") pa-git01.barnesandnoble.com
+          option(value="pa-git02") pa-git02.barnesandnoble.com
+    p
+      .right
+        input(type="checkbox", name="same_server")
+        label(for='same_server') Same Server?
+    p
+      .left
+        label(for='server_to') To Server:
+      .right
+        select(name="server_to")
+          option(value="") -- Select Gerrit Server --
+          option(value="dhadevgit01") dhadevgit01.barnesandnoble.com
+          option(value="dhadevgit02") dhadevgit02.barnesandnoble.com
+          option(value="pa-git01") pa-git01.barnesandnoble.com
+          option(value="pa-git02") pa-git02.barnesandnoble.com
+    p
+      .left
+        label(for='repository') Repository:
+      .right
+        //select(name="repository", value='')
+        input(type='text', name="repository", value='', size=50)
+    p
+      .left
+        label(for='branch_from') From Branch:
+      .right
+        input(type="text", name="branch_from", value='', size=50)
+        .tip
+          | Enter a branch
+          | which we want to
+          | merge from.
+    p
+      .right
+        input(type="checkbox", name="same_branch")
+        label(for='same_branch') Same Branch?
+    p
+      .left
+        label(for='branch_to') To Branch:
+      .right
+        input(type="text", name="branch_to", value='', size=50)
+        .tip
+          | Enter a branch
+          | which we want to
+          | merge to.
+    p.buttons
+      .right
+        input(type="submit", value="Submit")
+
